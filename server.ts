@@ -91,6 +91,7 @@ app.post('/api/auth/login', async (req, res) => {
   console.log(`[Auth] ADMIN_USER configured: ${ADMIN_USER}`);
   console.log(`[Auth] ADMIN_PASS_HASH configured length: ${ADMIN_PASS_HASH.length}`);
   console.log(`[Auth] ADMIN_PASS_HASH prefix: ${ADMIN_PASS_HASH.substring(0, 5)}`);
+  console.log(`[Auth] ADMIN_PASS_HASH full value: ${ADMIN_PASS_HASH}`);
 
   // 验证用户名
   if (username !== ADMIN_USER) {
