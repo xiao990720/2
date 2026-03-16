@@ -87,7 +87,7 @@ app.post('/api/auth/login', async (req, res) => {
   
   console.log(`[Auth] Login attempt for user: ${username}`);
   console.log(`[Auth] Input password length: ${password ? password.length : 'undefined'}`);
-  console.log(`[Auth] Input password prefix: ${password ? password.substring(0, 2) : 'undefined'}`); // 新增：打印前两个字符
+  console.log(`[Auth] Input password prefix: ${password ? password.substring(0, 20) : 'undefined'}`); // 新增：打印前两个字符
   console.log(`[Auth] ADMIN_USER configured: ${ADMIN_USER}`);
   console.log(`[Auth] ADMIN_PASS_HASH configured length: ${ADMIN_PASS_HASH.length}`);
   console.log(`[Auth] ADMIN_PASS_HASH prefix: ${ADMIN_PASS_HASH.substring(0, 5)}`);
