@@ -1,0 +1,5 @@
+{
+  "name": "Sport Dash",
+  "description": "A personal workout dashboard to track running, cycling, and hiking activities.",
+  "requestFramePermissions": []
+}
