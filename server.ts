@@ -81,6 +81,7 @@ import bcrypt from 'bcryptjs'; // 切换为 bcryptjs
 // 从环境变量读取凭据（注意：ADMIN_PASS 应该是一个 bcrypt 哈希值）
 const ADMIN_USER = process.env.ADMIN_USER || 'admin';
 const ADMIN_PASS_HASH = process.env.ADMIN_PASS_HASH || '$2a$10$ydpKSiLUepB8Zxjgcolj1OkcmY1X7vFvbOH0lCaXDTmF5cLjfAq/O';
+const ADMIN_TOKEN = process.env.ADMIN_TOKEN || 'simple-admin-token-12345'; // 重新定义 ADMIN_TOKEN
 
 app.post('/api/auth/login', async (req, res) => {
   const { username, password } = req.body;
@@ -91,7 +92,6 @@ app.post('/api/auth/login', async (req, res) => {
   console.log(`[Auth] ADMIN_USER configured: ${ADMIN_USER}`);
   console.log(`[Auth] ADMIN_PASS_HASH configured length: ${ADMIN_PASS_HASH.length}`);
   console.log(`[Auth] ADMIN_PASS_HASH prefix: ${ADMIN_PASS_HASH.substring(0, 5)}`);
-  console.log(`[Auth] ADMIN_PASS_HASH full value: ${ADMIN_PASS_HASH}`);
 
   // 验证用户名
   if (username !== ADMIN_USER) {
